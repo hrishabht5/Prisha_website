@@ -1,92 +1,100 @@
 /* ===== SHARED HEADER ===== */
 const HEADER_HTML = `
-<div id="top-strip">
-  <div class="top-strip-inner">
-    <div class="top-strip-left">
-      <span class="top-strip-item">&#128336; Mon&ndash;Sun: 9:00 AM &ndash; 9:00 PM</span>
-      <span class="top-strip-item">&#128205; Bawadia Kalan, Bhopal &ndash; 462026</span>
-    </div>
-    <div class="top-strip-right">
-      <a href="tel:+917980043162" class="top-strip-item">&#128222; +91 79800 43162</a>
-      <a href="mailto:mrdl.gpt@gmail.com" class="top-strip-item">&#128140; mrdl.gpt@gmail.com</a>
-      <div class="strip-social">
-        <a href="https://www.instagram.com/prishaclinic_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">&#128247;</a>
-        <a href="https://www.facebook.com/profile.php?id=61578853131643" target="_blank" rel="noopener noreferrer" aria-label="Facebook">&#128100;</a>
-        <a href="https://www.youtube.com/@prisha_clinic_bhopal" target="_blank" rel="noopener noreferrer" aria-label="YouTube">&#127909;</a>
-        <a href="https://wa.me/917980043162" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">&#128172;</a>
-      </div>
+<div class="bg-[#0090A8] text-white text-xs py-1.5 hidden md:block">
+  <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+    <span>Mon&ndash;Sun: 9:00 AM &ndash; 9:00 PM &nbsp;&bull;&nbsp; Bawadia Kalan, Bhopal</span>
+    <div class="flex gap-5">
+      <a href="tel:+917980043162" class="hover:text-[#F5A623] transition-colors">+91 79800 43162</a>
+      <a href="mailto:mrdl.gpt@gmail.com" class="hover:text-[#F5A623] transition-colors">mrdl.gpt@gmail.com</a>
     </div>
   </div>
 </div>
-<header id="site-header">
-  <nav class="navbar container">
-    <a href="index.html" class="logo" aria-label="Prisha Clinic Home">
-      <img src="assets/images/logo.jpg" alt="Prisha Speech Therapy and Hearing Clinic" class="logo-img">
-      <div class="logo-text">Prisha <span>Speech Therapy &amp; Hearing Clinic</span></div>
+<header id="site-header" class="sticky top-0 z-50 bg-white border-b border-gray-100 transition-shadow duration-300">
+  <nav class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
+      <img src="assets/images/logo.jpg" alt="Prisha Clinic" class="h-10 w-auto rounded">
+      <div class="leading-tight">
+        <span class="font-bold text-gray-900 text-sm block">Prisha</span>
+        <span class="text-xs text-gray-500 font-normal">Speech Therapy &amp; Hearing Clinic</span>
+      </div>
     </a>
-    <button id="burger" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <button id="burger" aria-label="Toggle navigation menu" aria-expanded="false"
+      class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors flex flex-col gap-1.5">
+      <span class="block w-5 h-0.5 bg-gray-700 rounded transition-all duration-300"></span>
+      <span class="block w-5 h-0.5 bg-gray-700 rounded transition-all duration-300"></span>
+      <span class="block w-5 h-0.5 bg-gray-700 rounded transition-all duration-300"></span>
     </button>
-    <ul id="nav-menu" role="list">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="about.html" class="nav-link">About Us</a></li>
-      <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="contact.html" class="nav-link cta-nav">Book Appointment</a></li>
+    <ul id="nav-menu" role="list" class="hidden md:flex items-center gap-1 text-sm font-medium">
+      <li><a href="index.html" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-[#0090A8] hover:bg-cyan-50 transition-colors block">Home</a></li>
+      <li><a href="about.html" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-[#0090A8] hover:bg-cyan-50 transition-colors block">About Us</a></li>
+      <li><a href="services.html" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-[#0090A8] hover:bg-cyan-50 transition-colors block">Services</a></li>
+      <li><a href="contact.html" class="nav-link ml-2 px-4 py-2 rounded-full bg-[#EC1E8C] text-white hover:bg-pink-700 transition-colors block text-center">Book Appointment</a></li>
     </ul>
   </nav>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2">
+    <a href="index.html" class="nav-link block py-3 text-gray-700 border-b border-gray-50 hover:text-[#0090A8] transition-colors text-sm font-medium">Home</a>
+    <a href="about.html" class="nav-link block py-3 text-gray-700 border-b border-gray-50 hover:text-[#0090A8] transition-colors text-sm font-medium">About Us</a>
+    <a href="services.html" class="nav-link block py-3 text-gray-700 border-b border-gray-50 hover:text-[#0090A8] transition-colors text-sm font-medium">Services</a>
+    <a href="contact.html" class="nav-link mt-3 px-4 py-2.5 rounded-full bg-[#EC1E8C] text-white text-center block hover:bg-pink-700 transition-colors text-sm font-medium">Book Appointment</a>
+  </div>
 </header>`;
 
 /* ===== SHARED FOOTER ===== */
 const FOOTER_HTML = `
-<footer id="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col footer-brand">
-        <img src="assets/images/logo.jpg" alt="Prisha Clinic" style="height:52px;border-radius:6px;margin-bottom:0.75rem;background:white;padding:4px;">
-        <p>Compassionate, expert speech therapy and hearing care for all ages in Bhopal, Madhya Pradesh.</p>
-        <div class="footer-social" style="margin-top:1rem;">
-          <a href="https://www.instagram.com/prishaclinic_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">&#128247;</a>
-          <a href="https://www.facebook.com/profile.php?id=61578853131643" target="_blank" rel="noopener noreferrer" aria-label="Facebook">&#128100;</a>
-          <a href="https://www.youtube.com/@prisha_clinic_bhopal" target="_blank" rel="noopener noreferrer" aria-label="YouTube">&#127909;</a>
-          <a href="https://wa.me/917980043162" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">&#128172;</a>
-          <a href="tel:+917980043162" aria-label="Call us">&#128222;</a>
-          <a href="mailto:mrdl.gpt@gmail.com" aria-label="Email us">&#128140;</a>
+<footer class="bg-[#0e2d45] text-white" id="site-footer">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="assets/images/logo.jpg" alt="Prisha Clinic" class="h-11 w-auto rounded bg-white p-0.5">
+          <div>
+            <span class="font-bold text-white text-sm block">Prisha Clinic</span>
+            <span class="text-xs text-gray-400">Est. 2009 &bull; ADIP Certified</span>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed mb-4">Speech therapy and hearing care for all ages in Bhopal, Madhya Pradesh. Open 7 days, 9 AM &ndash; 9 PM.</p>
+        <div class="flex gap-2.5">
+          <a href="https://www.instagram.com/prishaclinic_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm hover:bg-[#EC1E8C] transition-colors">&#128247;</a>
+          <a href="https://www.facebook.com/profile.php?id=61578853131643" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm hover:bg-[#EC1E8C] transition-colors">&#128100;</a>
+          <a href="https://www.youtube.com/@prisha_clinic_bhopal" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm hover:bg-[#EC1E8C] transition-colors">&#127909;</a>
+          <a href="https://wa.me/917980043162" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm hover:bg-[#25D366] transition-colors">&#128172;</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Dr. Mridula Rani</a></li>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="contact.html">Book Appointment</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm">Quick Links</h4>
+        <ul class="space-y-2.5 text-sm text-gray-400">
+          <li><a href="index.html" class="hover:text-[#EC1E8C] transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#EC1E8C] transition-colors">About Dr. Mridula Rani</a></li>
+          <li><a href="services.html" class="hover:text-[#EC1E8C] transition-colors">Our Services</a></li>
+          <li><a href="contact.html" class="hover:text-[#EC1E8C] transition-colors">Book Appointment</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Our Services</h4>
-        <ul>
-          <li><a href="services.html#speech">Speech Therapy</a></li>
-          <li><a href="services.html#audiometry">Audiometry &amp; Hearing Tests</a></li>
-          <li><a href="services.html#hearing-aids">Hearing Aids &amp; Fitting</a></li>
-          <li><a href="services.html#cochlear">Cochlear Implant Therapy</a></li>
-          <li><a href="contact.html">General Consultation &#8377;500</a></li>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm">Our Services</h4>
+        <ul class="space-y-2.5 text-sm text-gray-400">
+          <li><a href="services.html#speech" class="hover:text-[#EC1E8C] transition-colors">Speech Therapy</a></li>
+          <li><a href="services.html#audiometry" class="hover:text-[#EC1E8C] transition-colors">Audiometry &amp; Hearing Tests</a></li>
+          <li><a href="services.html#hearing-aids" class="hover:text-[#EC1E8C] transition-colors">Hearing Aids &amp; Fitting</a></li>
+          <li><a href="services.html#cochlear" class="hover:text-[#EC1E8C] transition-colors">Cochlear Implant Therapy</a></li>
+          <li><a href="contact.html" class="hover:text-[#EC1E8C] transition-colors">General Consultation &#8377;500</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact Us</h4>
-        <ul>
-          <li>&#128205; B49 Jai Bhawani Society, Near Galaxy Towers, Bawadia Kalan, Bhopal &ndash; 462026</li>
-          <li>&#128222; <a href="tel:+917980043162">+91 79800 43162</a></li>
-          <li>&#128140; <a href="mailto:mrdl.gpt@gmail.com">mrdl.gpt@gmail.com</a></li>
-          <li>&#128336; Mon&ndash;Sun: 9:00 AM &ndash; 9:00 PM</li>
-          <li>&#128247; <a href="https://www.instagram.com/prishaclinic_/" target="_blank" rel="noopener noreferrer">@prishaclinic_</a></li>
-          <li>&#128100; <a href="https://www.facebook.com/profile.php?id=61578853131643" target="_blank" rel="noopener noreferrer">Facebook Page</a></li>
-          <li>&#127909; <a href="https://www.youtube.com/@prisha_clinic_bhopal" target="_blank" rel="noopener noreferrer">YouTube Channel</a></li>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm">Contact</h4>
+        <ul class="space-y-2.5 text-sm text-gray-400">
+          <li>B49 Jai Bhawani Society, Near Galaxy Towers, Bawadia Kalan, Bhopal &ndash; 462026</li>
+          <li><a href="tel:+917980043162" class="hover:text-[#EC1E8C] transition-colors">+91 79800 43162</a></li>
+          <li><a href="mailto:mrdl.gpt@gmail.com" class="hover:text-[#EC1E8C] transition-colors">mrdl.gpt@gmail.com</a></li>
+          <li>Mon&ndash;Sun: 9:00 AM &ndash; 9:00 PM</li>
+          <li><a href="https://www.instagram.com/prishaclinic_/" target="_blank" rel="noopener noreferrer" class="hover:text-[#EC1E8C] transition-colors">@prishaclinic_ on Instagram</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="border-t border-white/10 pt-6 text-center text-xs text-gray-500">
       <p>&copy; 2025 Prisha Speech Therapy &amp; Hearing Clinic, Bhopal &mdash; All rights reserved &bull; Rated 4.8&#9733; on Justdial</p>
     </div>
   </div>
@@ -127,7 +135,8 @@ function setActiveNav() {
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
     if (href === page || (page === '' && href === 'index.html')) {
-      link.classList.add('active');
+      link.style.color = '#0090A8';
+      link.style.fontWeight = '700';
     }
   });
 }
@@ -135,19 +144,18 @@ function setActiveNav() {
 /* ===== HAMBURGER ===== */
 function initBurger() {
   const burger = document.getElementById('burger');
-  const menu = document.getElementById('nav-menu');
-  if (!burger || !menu) return;
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (!burger || !mobileMenu) return;
 
   burger.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    burger.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', open);
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    burger.setAttribute('aria-expanded', String(!isOpen));
   });
 
-  menu.querySelectorAll('a').forEach(a =>
+  mobileMenu.querySelectorAll('a').forEach(a =>
     a.addEventListener('click', () => {
-      menu.classList.remove('open');
-      burger.classList.remove('open');
+      mobileMenu.classList.add('hidden');
       burger.setAttribute('aria-expanded', 'false');
     })
   );
@@ -158,7 +166,7 @@ function initStickyHeader() {
   const header = document.getElementById('site-header');
   if (!header) return;
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
+    header.classList.toggle('shadow-md', window.scrollY > 50);
   }, { passive: true });
 }
 
@@ -236,7 +244,6 @@ function initContactForm() {
 
   form.addEventListener('submit', (e) => {
     let valid = true;
-
     const nameInput = document.getElementById('appt-name');
     const phoneInput = document.getElementById('appt-phone');
     const serviceInput = document.getElementById('appt-service');
@@ -247,12 +254,10 @@ function initContactForm() {
       showError(nameInput, 'Please enter your full name.');
       valid = false;
     }
-
     if (!/^\d{10}$/.test(phoneInput.value.trim())) {
       showError(phoneInput, 'Please enter a valid 10-digit phone number.');
       valid = false;
     }
-
     if (dateInput && dateInput.value) {
       const picked = new Date(dateInput.value);
       const today = new Date();
@@ -265,7 +270,6 @@ function initContactForm() {
       showError(dateInput, 'Please select a preferred appointment date.');
       valid = false;
     }
-
     if (!serviceInput.value) {
       showError(serviceInput, 'Please select a service.');
       valid = false;
@@ -288,7 +292,7 @@ function clearErrors(form) {
   form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
 }
 
-/* ===== ANIMATION 3: HERO PARALLAX ===== */
+/* ===== HERO PARALLAX ===== */
 function initHeroParallax() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const content = document.querySelector('.hero-content');
@@ -309,7 +313,7 @@ function initHeroParallax() {
   }, { passive: true });
 }
 
-/* ===== ANIMATION 4: TESTIMONIALS CAROUSEL ===== */
+/* ===== TESTIMONIALS CAROUSEL ===== */
 function initTestimonialsCarousel() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const track = document.querySelector('.carousel-track');
@@ -321,7 +325,7 @@ function initTestimonialsCarousel() {
   });
 }
 
-/* ===== ANIMATION 5: SECTION UNDERLINE DRAW ===== */
+/* ===== SECTION UNDERLINE DRAW ===== */
 function initUnderlineDraw() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {

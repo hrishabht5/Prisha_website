@@ -45,19 +45,12 @@
           "postalCode": "462026",
           "addressCountry": "IN"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 23.1869929,
-          "longitude": 77.4372388
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            "opens": "09:00",
-            "closes": "21:00"
-          }
-        ],
+        "geo": { "@type": "GeoCoordinates", "latitude": 23.1869929, "longitude": 77.4372388 },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "09:00", "closes": "21:00"
+        }],
         "hasMap": "https://www.google.com/maps/place/Prisha+Speech+Therapy+And+Hearing+Clinic/@23.1869929,77.4346639,17z"
       },
       {
@@ -70,9 +63,26 @@
     ]
   }
   </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00B8D4',
+            'primary-dark': '#0090A8',
+            accent: '#EC1E8C',
+            gold: '#F5A623',
+            brand: '#F5FDFF'
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-brand font-sans">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <div id="header-placeholder"></div>
@@ -85,95 +95,117 @@
 </section>
 
 <!-- CONTACT + FORM -->
-<section class="section">
-  <div class="container">
-    <div class="grid-2" style="gap:3rem; align-items:start;">
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
       <!-- CONTACT INFO -->
-      <div class="contact-info animate-on-scroll">
-        <h3>Get in Touch</h3>
-        <p style="margin-bottom:1.75rem;">We&rsquo;re open seven days a week. Walk in, call us, or fill in the form and we&rsquo;ll confirm your appointment.</p>
+      <div class="animate-from-left">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Get in touch</h2>
+        <p class="text-gray-500 mb-8 leading-relaxed">We&rsquo;re open seven days a week. Walk in, call us, or fill in the form and we&rsquo;ll confirm your appointment.</p>
 
-        <div class="contact-item">
-          <div class="contact-icon">&#128205;</div>
-          <div class="contact-detail">
-            <strong>Address</strong>
-            <p>B49 Jai Bhawani Society, In Front Of Galaxy Towers,<br>Near Berchha Mawa Bhandar, Bawadia Kalan,<br>Bhopal &ndash; 462026, Madhya Pradesh</p>
+        <div class="space-y-6">
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 min-w-[2.5rem] bg-[#00B8D4]/12 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800 text-sm mb-1">Address</div>
+              <p class="text-gray-500 text-sm leading-relaxed">B49 Jai Bhawani Society, In Front Of Galaxy Towers,<br>Near Berchha Mawa Bhandar, Bawadia Kalan,<br>Bhopal &ndash; 462026, Madhya Pradesh</p>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <div class="contact-icon">&#128222;</div>
-          <div class="contact-detail">
-            <strong>Phone</strong>
-            <p><a href="tel:+917980043162">+91 79800 43162</a></p>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 min-w-[2.5rem] bg-[#00B8D4]/12 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800 text-sm mb-1">Phone</div>
+              <a href="tel:+917980043162" class="text-primary-dark text-sm font-medium hover:underline">+91 79800 43162</a>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <div class="contact-icon">&#128140;</div>
-          <div class="contact-detail">
-            <strong>Email</strong>
-            <p><a href="mailto:mrdl.gpt@gmail.com">mrdl.gpt@gmail.com</a></p>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 min-w-[2.5rem] bg-[#00B8D4]/12 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800 text-sm mb-1">Email</div>
+              <a href="mailto:mrdl.gpt@gmail.com" class="text-primary-dark text-sm font-medium hover:underline">mrdl.gpt@gmail.com</a>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <div class="contact-icon">&#128336;</div>
-          <div class="contact-detail">
-            <strong>Clinic Hours</strong>
-            <table class="hours-table">
-              <tr><td>Monday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
-              <tr><td>Tuesday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
-              <tr><td>Wednesday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
-              <tr><td>Thursday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
-              <tr><td>Friday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
-              <tr><td>Saturday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
-              <tr><td>Sunday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
-            </table>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 min-w-[2.5rem] bg-[#00B8D4]/12 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800 text-sm mb-2">Clinic Hours</div>
+              <table class="text-sm text-gray-500 w-full">
+                <tr><td class="font-semibold text-gray-700 w-28 py-0.5">Monday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
+                <tr><td class="font-semibold text-gray-700 py-0.5">Tuesday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
+                <tr><td class="font-semibold text-gray-700 py-0.5">Wednesday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
+                <tr><td class="font-semibold text-gray-700 py-0.5">Thursday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
+                <tr><td class="font-semibold text-gray-700 py-0.5">Friday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
+                <tr><td class="font-semibold text-gray-700 py-0.5">Saturday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
+                <tr><td class="font-semibold text-gray-700 py-0.5">Sunday</td><td>9:00 AM &ndash; 9:00 PM</td></tr>
+              </table>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <div class="contact-icon">&#8377;</div>
-          <div class="contact-detail">
-            <strong>Consultation Fee</strong>
-            <p>&#8377;500 per consultation</p>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 min-w-[2.5rem] bg-[#00B8D4]/12 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800 text-sm mb-1">Consultation Fee</div>
+              <p class="text-gray-500 text-sm">&#8377;500 per consultation</p>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- APPOINTMENT FORM -->
-      <div class="animate-on-scroll">
+      <div class="animate-from-right">
         <div id="form-success" class="form-success">
-          &#10003; Thank you! Your appointment request has been received. We will call you shortly to confirm your appointment.
+          &#10003; Thank you! Your appointment request has been received. We will call you shortly to confirm.
         </div>
-        <div class="appt-form-wrap">
-          <h3>Request an Appointment</h3>
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">Request an Appointment</h3>
           <!-- TODO: Replace TODO_REPLACE_FORM_ID with your Formspree form ID.
                Register at https://formspree.io using mrdl.gpt@gmail.com -->
           <form id="appt-form" action="https://formspree.io/f/TODO_REPLACE_FORM_ID" method="POST" novalidate>
             <input type="hidden" name="_subject" value="New Appointment Request - Prisha Clinic">
             <input type="hidden" name="_next" value="contact.html?success=true">
 
-            <div class="form-group">
-              <label for="appt-name">Full Name *</label>
-              <input type="text" id="appt-name" name="name" placeholder="Enter your full name" required>
+            <div class="mb-5">
+              <label for="appt-name" class="form-label">Full Name *</label>
+              <input type="text" id="appt-name" name="name" placeholder="Enter your full name" required class="form-input">
             </div>
 
-            <div class="form-group">
-              <label for="appt-phone">Phone Number *</label>
-              <input type="tel" id="appt-phone" name="phone" placeholder="10-digit mobile number" maxlength="10" required>
+            <div class="mb-5">
+              <label for="appt-phone" class="form-label">Phone Number *</label>
+              <input type="tel" id="appt-phone" name="phone" placeholder="10-digit mobile number" maxlength="10" required class="form-input">
             </div>
 
-            <div class="form-group">
-              <label for="appt-date">Preferred Date *</label>
-              <input type="date" id="appt-date" name="date" required>
+            <div class="mb-5">
+              <label for="appt-date" class="form-label">Preferred Date *</label>
+              <input type="date" id="appt-date" name="date" required class="form-input">
             </div>
 
-            <div class="form-group">
-              <label for="appt-service">Service Required *</label>
-              <select id="appt-service" name="service" required>
+            <div class="mb-5">
+              <label for="appt-service" class="form-label">Service Required *</label>
+              <select id="appt-service" name="service" required class="form-input">
                 <option value="">Select a service</option>
                 <option value="Speech Therapy">Speech Therapy</option>
                 <option value="Audiometry">Audiometry / Hearing Test</option>
@@ -183,15 +215,15 @@
               </select>
             </div>
 
-            <div class="form-group">
-              <label for="appt-message">Message (optional)</label>
-              <textarea id="appt-message" name="message" placeholder="Describe your concern or any specific requirements..."></textarea>
+            <div class="mb-6">
+              <label for="appt-message" class="form-label">Message (optional)</label>
+              <textarea id="appt-message" name="message" placeholder="Describe your concern or any specific requirements..." class="form-input"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-size:1rem; padding:0.9rem;">
-              &#128197; Request Appointment
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:0.9rem 1.75rem;">
+              Request Appointment
             </button>
-            <p style="font-size:0.8rem; color:var(--text-light); text-align:center; margin-top:0.75rem;">We will call you within 24 hours to confirm your appointment.</p>
+            <p class="text-xs text-gray-400 text-center mt-3">We will call you within 24 hours to confirm your appointment.</p>
           </form>
         </div>
       </div>
@@ -201,11 +233,11 @@
 </section>
 
 <!-- GOOGLE MAPS -->
-<section class="section" style="padding-top:0;">
-  <div class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem;">
-      <h3 class="animate-on-scroll">&#128205; Find Us on the Map</h3>
-      <a href="https://www.google.com/maps/place/Prisha+Speech+Therapy+And+Hearing+Clinic/@23.1869929,77.4346639,17z" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:0.88rem;padding:0.55rem 1.25rem;">&#129517; Get Directions</a>
+<section class="pb-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center flex-wrap gap-3 mb-4">
+      <h3 class="text-xl font-bold text-gray-900 animate-on-scroll">Find us on the map</h3>
+      <a href="https://www.google.com/maps/place/Prisha+Speech+Therapy+And+Hearing+Clinic/@23.1869929,77.4346639,17z" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-sm py-2 px-5">Get Directions</a>
     </div>
     <div class="map-wrapper animate-on-scroll">
       <iframe
@@ -218,28 +250,6 @@
         referrerpolicy="no-referrer-when-downgrade"
         title="Prisha Speech Therapy and Hearing Clinic — Bawadia Kalan, Bhopal">
       </iframe>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIAL LINKS -->
-<section class="section" style="padding-top:0; text-align:center;">
-  <div class="container">
-    <h3 class="animate-on-scroll">Connect With Us</h3>
-    <p class="animate-on-scroll" style="margin-top:0.5rem; margin-bottom:1.5rem;">Follow us on Instagram or chat with us on WhatsApp for quick replies.</p>
-    <div class="social-links animate-on-scroll">
-      <a href="https://www.instagram.com/prishaclinic_/" target="_blank" rel="noopener noreferrer" class="social-link instagram">
-        &#128247; @prishaclinic_
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61578853131643" target="_blank" rel="noopener noreferrer" class="social-link" style="background:#1877F2;color:white;">
-        &#128100; Facebook Page
-      </a>
-      <a href="https://www.youtube.com/@prisha_clinic_bhopal" target="_blank" rel="noopener noreferrer" class="social-link" style="background:#FF0000;color:white;">
-        &#127909; YouTube Channel
-      </a>
-      <a href="https://wa.me/917980043162" target="_blank" rel="noopener noreferrer" class="social-link whatsapp">
-        &#128172; Chat on WhatsApp
-      </a>
     </div>
   </div>
 </section>
