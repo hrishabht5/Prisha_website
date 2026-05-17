@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 52" width="180" height="52">
+  <!-- Circle icon -->
+  <circle cx="26" cy="26" r="22" fill="#1A6FA8"/>
+  <!-- Sound wave lines in circle -->
+  <line x1="18" y1="26" x2="18" y2="26" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="21" y1="20" x2="21" y2="32" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="26" y1="16" x2="26" y2="36" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="31" y1="20" x2="31" y2="32" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="34" y1="26" x2="34" y2="26" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Clinic name text -->
+  <text x="56" y="22" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="800" fill="#1A6FA8">Prisha Clinic</text>
+  <text x="56" y="38" font-family="Segoe UI, system-ui, sans-serif" font-size="10" font-weight="500" fill="#555555">Speech &amp; Hearing Care</text>
+</svg>

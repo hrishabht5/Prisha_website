@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.instagram.com)",
+      "WebFetch(domain:kivihealth.com)",
+      "WebFetch(domain:www.justdial.com)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\\\\Prisha website\" -Recurse -Force)",
+      "Bash(Select-Object FullName, Extension)",
+      "Bash(Sort-Object FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\\\\Prisha website\" -Force | ForEach-Object { $_.FullName })",
+      "PowerShell(ls \"C:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\" -Force | Where-Object { $_.PSIsContainer } | ForEach-Object { $_.Name })",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\\\\Prisha website\\\\css\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\\\\Prisha website\\\\js\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\\\\Prisha website\\\\assets\\\\images\")",
+      "Bash(Write-Output \"Directories created\")",
+      "PowerShell(New-Item *)",
+      "PowerShell(Get-ChildItem -Recurse \"C:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\\\\Prisha website\" | Where-Object { -not $_.PSIsContainer } | Select-Object FullName, @{N='Size\\(KB\\)';E={[math]::Round\\($_.Length/1KB,1\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Copy-Item *)",
+      "WebFetch(domain:audisenseclinic.com)",
+      "WebFetch(domain:umangspeechandhearingclinic.com)",
+      "WebFetch(domain:www.myearclinic.in)",
+      "WebFetch(domain:ticdbhopal.org)",
+      "WebFetch(domain:nayi-disha.org)",
+      "PowerShell(Get-ChildItem -Recurse \"C:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\\\\Prisha website\" | Where-Object { -not $_.PSIsContainer -and $_.Extension -in '.html','.css','.js','.svg','.jpg' } | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,1\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Recurse \"C:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\\\\Prisha website\" | Where-Object { -not $_.PSIsContainer -and $_.Extension -in '.html','.css','.js' } | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,1\\)}} | Format-Table -AutoSize)",
+      "Skill(everything-claude-code)"
+    ]
+  }
+}

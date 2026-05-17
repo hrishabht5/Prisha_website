@@ -1,0 +1,7 @@
+# robots.txt — Prisha Speech Therapy and Hearing Clinic
+# TODO: Replace prishaclinic.in with your actual domain
+
+User-agent: *
+Allow: /
+
+Sitemap: https://prishaclinic.in/sitemap.xml
