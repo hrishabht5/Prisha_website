@@ -453,7 +453,7 @@
 
     /* Final CTA strip */
     .cta-strip {
-      background: var(--ink);
+      background: linear-gradient(135deg, #007A8A 0%, #00B8D4 45%, #EC1E8C 100%);
       color: #fff;
       padding: 80px 0;
       position: relative;
@@ -461,9 +461,7 @@
     }
     .cta-strip::before {
       content: ""; position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse at 12% 90%, rgba(194,114,43,0.18), transparent 50%),
-        radial-gradient(ellipse at 90% 10%, rgba(38,107,110,0.20), transparent 50%);
+      background: radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.08), transparent 55%);
       pointer-events: none;
     }
     .cta-strip .container { position: relative; z-index: 1; }
@@ -478,8 +476,8 @@
       margin-bottom: 22px;
     }
     .cta-strip p { color: rgba(255,255,255,0.75); font-size: 17px; max-width: 50ch; margin-bottom: 32px; }
-    .cta-strip .btn-light { color: var(--ink); }
-    .cta-strip .btn-ghost-light { background: transparent; color: #fff; border-color: rgba(255,255,255,0.25); }
+    .cta-strip .btn-light { color: var(--ink); font-weight: 600; }
+    .cta-strip .btn-ghost-light { background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.4); }
     .cta-strip .btn-ghost-light:hover { background: #fff; color: var(--ink); border-color: #fff; }
 
     /* Marigold underline accent */

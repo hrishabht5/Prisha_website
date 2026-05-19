@@ -14,15 +14,15 @@
   --line:         #E2DDD0;     /* hairline border on warm paper */
   --line-strong:  #C7BFA9;
   /* "marigold" carries the logo's cyan */
-  --marigold:     #0E8FA6;
-  --marigold-2:   #0A6F82;
-  --marigold-soft:#CFEAEF;
+  --marigold:     #00B8D4;  /* logo cyan — vivid */
+  --marigold-2:   #0091A5;
+  --marigold-soft:#CCF1F8;
   /* "teal" carries the logo's magenta */
-  --teal:         #C53087;
-  --teal-soft:    #F7DCEB;
+  --teal:         #EC1E8C;  /* logo magenta — vivid */
+  --teal-soft:    #FDDCEE;
   /* Gold accent */
-  --gold:         #D4A33C;
-  --gold-soft:    #F2E4BE;
+  --gold:         #F5A623;  /* logo gold — vivid */
+  --gold-soft:    #FEF0D0;
   --whats:        #1B8754;
   --shadow-sm:    0 1px 2px rgba(22,50,58,0.04), 0 1px 1px rgba(22,50,58,0.03);
   --shadow-md:    0 8px 24px -8px rgba(22,50,58,0.12), 0 2px 6px rgba(22,50,58,0.04);
@@ -130,8 +130,8 @@ p { color: var(--ink-2); }
   line-height: 1;
 }
 .btn:active { transform: translateY(1px); }
-.btn-primary { background: var(--ink); color: #fff; }
-.btn-primary:hover { background: var(--marigold); }
+.btn-primary { background: var(--marigold); color: #fff; }
+.btn-primary:hover { background: var(--marigold-2); }
 .btn-marigold { background: var(--marigold); color: #fff; }
 .btn-marigold:hover { background: var(--marigold-2); }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); }
@@ -315,13 +315,13 @@ p { color: var(--ink-2); }
 .nav-cta {
   margin-left: 10px;
   padding: 11px 18px;
-  background: var(--ink);
+  background: var(--marigold);
   color: #fff;
   border-radius: 999px;
   font-size: 14px;
   transition: background 0.18s;
 }
-.nav-cta:hover { background: var(--marigold); }
+.nav-cta:hover { background: var(--marigold-2); }
 
 .burger {
   display: none;
