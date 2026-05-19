@@ -22,8 +22,8 @@
   <meta name="geo.position" content="23.1869929;77.4372388">
   <meta name="ICBM" content="23.1869929, 77.4372388">
   <link rel="canonical" href="https://prishaclinic.in/">
-  <title>Prisha Speech Therapy & Hearing Clinic Bhopal | Dr. Mridula Rani</title>
-  <!-- TODO: Replace prishaclinic.in with your actual domain throughout this file -->
+  <title>Prisha Speech Therapy &amp; Hearing Clinic Bhopal | Dr. Mridula Rani</title>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -75,260 +75,904 @@
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#00B8D4',
-            'primary-dark': '#0090A8',
-            accent: '#EC1E8C',
-            gold: '#F5A623',
-            brand: '#F5FDFF'
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
-        }
-      }
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    /* --------- Home-only styles --------- */
+    .hero-section { padding: 80px 0 32px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 64px;
+      align-items: center;
     }
-  </script>
-  <link rel="stylesheet" href="css/style.css">
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-section { padding: 48px 0 24px; }
+    }
+    .hero-h {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(44px, 6.4vw, 86px);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      text-wrap: balance;
+      margin: 22px 0 26px;
+    }
+    .hero-h em {
+      font-style: italic;
+      color: var(--marigold);
+      font-feature-settings: "ss01";
+    }
+    .hero-sub {
+      font-size: clamp(16px, 1.5vw, 19px);
+      line-height: 1.55;
+      max-width: 52ch;
+      color: var(--ink-2);
+      margin-bottom: 32px;
+    }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; gap: 8px 18px;
+      align-items: center; margin-top: 28px;
+      font-size: 13px; color: var(--mute);
+    }
+    .hero-meta b { color: var(--ink); font-weight: 500; }
+
+    /* Hero portrait stack */
+    .hero-art {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      width: 100%;
+    }
+    .hero-art .ph-main {
+      position: absolute;
+      inset: 0 22% 18% 0;
+      border-radius: 220px 220px var(--radius-lg) var(--radius-lg);
+    }
+    .hero-art .ph-side {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 56%; height: 46%;
+      border-radius: var(--radius-lg) var(--radius-lg) 140px 140px;
+    }
+    .hero-art .badge {
+      position: absolute;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      box-shadow: var(--shadow-md);
+      max-width: 220px;
+    }
+    .hero-art .badge.rating { top: 8%; right: -8px; }
+    .hero-art .badge.adip {
+      bottom: 50%; left: -12px;
+      transform: translateY(50%);
+    }
+    .hero-art .badge .num {
+      font-family: var(--font-display);
+      font-size: 32px;
+      line-height: 1; color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .hero-art .badge .lbl {
+      font-size: 11.5px;
+      letter-spacing: 0.05em;
+      color: var(--mute);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .hero-art .badge.adip { display: flex; gap: 12px; align-items: center; }
+    .hero-art .badge.adip .seal {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--teal-soft); color: var(--teal);
+      display: grid; place-items: center;
+      font-family: var(--font-mono);
+      font-size: 9px; font-weight: 600; letter-spacing: 0.04em;
+      border: 1px solid #BFD8D2;
+    }
+    .hero-art .badge.adip .lbl-line {
+      font-size: 11.5px; color: var(--mute);
+      text-transform: uppercase; letter-spacing: 0.06em;
+      line-height: 1.3;
+    }
+    .hero-art .badge.adip .lbl-line b { color: var(--ink); font-weight: 500; letter-spacing: 0; text-transform: none; font-size: 13.5px; display: block; }
+
+    @media (max-width: 720px) {
+      .hero-art .badge.rating { top: 12px; right: 12px; padding: 10px 12px; }
+      .hero-art .badge.rating .num { font-size: 24px; }
+      .hero-art .badge.adip { left: 12px; bottom: 12px; transform: none; top: auto; right: auto; padding: 10px 12px; }
+    }
+
+    /* Trust strip */
+    .trust-strip {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+      background: var(--paper-2);
+      overflow: hidden;
+    }
+    .trust-row {
+      display: flex; align-items: center; gap: 40px;
+      font-size: 13px; color: var(--ink-2);
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .trust-row .item { display: flex; align-items: center; gap: 10px; }
+    .trust-row .num {
+      font-family: var(--font-display);
+      font-size: 24px; color: var(--ink);
+      line-height: 1; letter-spacing: -0.02em;
+    }
+    .trust-row .lbl {
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--mute);
+      text-transform: uppercase;
+    }
+
+    /* Services grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    @media (max-width: 960px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+    .svc {
+      background: var(--paper);
+      padding: 28px 26px 30px;
+      display: flex; flex-direction: column;
+      transition: background 0.2s ease;
+      position: relative;
+      min-height: 260px;
+    }
+    .svc:hover { background: var(--paper-2); }
+    .svc .svc-num {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.08em;
+      color: var(--marigold);
+      margin-bottom: 20px;
+    }
+    .svc h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 26px;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .svc p {
+      font-size: 14px; color: var(--ink-2); line-height: 1.55;
+      margin-bottom: 18px;
+    }
+    .svc .svc-tags {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;
+    }
+    .svc .svc-tags span {
+      font-size: 11.5px;
+      color: var(--mute);
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+    }
+    .svc .svc-link {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--marigold);
+      letter-spacing: -0.005em;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .svc:hover .svc-link { color: var(--marigold-2); }
+
+    /* Doctors row */
+    .docs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    @media (max-width: 960px) { .docs-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .doc-card .ph {
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-xl);
+      margin-bottom: 24px;
+    }
+    .doc-card h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 36px;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1.05;
+    }
+    .doc-card .role {
+      font-size: 13.5px; color: var(--marigold);
+      letter-spacing: -0.005em;
+      margin: 6px 0 16px;
+    }
+    .doc-card .role .dot { color: var(--mute); margin: 0 8px; }
+    .doc-card p { font-size: 15px; line-height: 1.6; color: var(--ink-2); max-width: 50ch; }
+    .doc-tags {
+      margin-top: 18px; display: flex; flex-wrap: wrap; gap: 6px;
+    }
+    .doc-tags span {
+      font-size: 12px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--teal-soft); color: var(--teal);
+      border: 1px solid rgba(38,107,110,0.18);
+    }
+
+    /* Visit flow */
+    .visit-flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 32px;
+    }
+    @media (max-width: 880px) { .visit-flow { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .visit-flow { grid-template-columns: 1fr; } }
+    .step {
+      background: var(--paper);
+      padding: 28px 22px 26px;
+      position: relative;
+      min-height: 180px;
+    }
+    .step .step-num {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--marigold);
+      letter-spacing: 0.08em;
+      margin-bottom: 22px;
+    }
+    .step h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .step p {
+      font-size: 13.5px; line-height: 1.55; color: var(--ink-2);
+    }
+
+    /* Testimonials editorial layout */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 960px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex; flex-direction: column;
+    }
+    .review.feature { background: var(--paper-2); }
+    .review .stars { color: var(--gold); font-size: 14px; letter-spacing: 4px; margin-bottom: 18px; }
+    .review .body {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.32;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      text-wrap: balance;
+      flex: 1;
+    }
+    .review.feature .body { font-size: 28px; }
+    .review .author {
+      margin-top: 22px;
+      display: flex; align-items: center; gap: 12px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+    .review .avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--teal-soft);
+      color: var(--teal);
+      display: grid; place-items: center;
+      font-weight: 500; font-size: 14px;
+      border: 1px solid rgba(38,107,110,0.2);
+    }
+    .review .author-name { font-size: 14px; color: var(--ink); font-weight: 500; }
+    .review .author-meta { font-size: 12px; color: var(--mute); }
+
+    /* Bilingual greeting band */
+    .bilingual {
+      display: flex; align-items: baseline; gap: 16px;
+      flex-wrap: wrap;
+    }
+    .bilingual .h {
+      font-family: var(--font-hindi);
+      font-size: clamp(20px, 2vw, 26px);
+      color: var(--marigold);
+      font-style: italic;
+      letter-spacing: 0;
+    }
+    .bilingual .sep { color: var(--line-strong); font-size: 20px; }
+
+    /* Location card */
+    .loc-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    @media (max-width: 880px) { .loc-grid { grid-template-columns: 1fr; } }
+    .loc-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex; flex-direction: column; gap: 22px;
+    }
+    .loc-row { display: flex; gap: 14px; }
+    .loc-row .ic {
+      width: 36px; height: 36px; min-width: 36px;
+      border-radius: 50%;
+      background: var(--marigold-soft); color: var(--marigold);
+      display: grid; place-items: center;
+      font-family: var(--font-mono); font-weight: 500; font-size: 13px;
+    }
+    .loc-row h5 {
+      font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--mute); font-weight: 500; margin-bottom: 6px;
+    }
+    .loc-row p, .loc-row a { font-size: 14.5px; color: var(--ink); line-height: 1.5; }
+    .loc-row a:hover { color: var(--marigold); }
+
+    .map-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      min-height: 380px;
+      background: var(--paper-2);
+    }
+    .map-wrap iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
+
+    /* Final CTA strip */
+    .cta-strip {
+      background: var(--ink);
+      color: #fff;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-strip::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 12% 90%, rgba(194,114,43,0.18), transparent 50%),
+        radial-gradient(ellipse at 90% 10%, rgba(38,107,110,0.20), transparent 50%);
+      pointer-events: none;
+    }
+    .cta-strip .container { position: relative; z-index: 1; }
+    .cta-strip h2 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(34px, 4.6vw, 60px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: #fff;
+      text-wrap: balance;
+      margin-bottom: 22px;
+    }
+    .cta-strip p { color: rgba(255,255,255,0.75); font-size: 17px; max-width: 50ch; margin-bottom: 32px; }
+    .cta-strip .btn-light { color: var(--ink); }
+    .cta-strip .btn-ghost-light { background: transparent; color: #fff; border-color: rgba(255,255,255,0.25); }
+    .cta-strip .btn-ghost-light:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
+    /* Marigold underline accent */
+    .underline-mari {
+      background-image: linear-gradient(transparent 64%, var(--marigold-soft) 64% 92%, transparent 92%);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      padding: 0 0.05em;
+    }
+
+    /* Font fallback declarations */
+    @font-face {
+      font-family: "Newsreader Fallback";
+      src: local("Georgia");
+      ascent-override: 92%;
+      descent-override: 22%;
+      size-adjust: 102%;
+    }
+    @font-face {
+      font-family: "Geist Fallback";
+      src: local("Helvetica Neue"), local("Helvetica"), local("Arial");
+      size-adjust: 97%;
+    }
+
+    /* CTA strip responsive */
+    @media (max-width: 880px) {
+      .cta-strip .container { grid-template-columns: 1fr !important; }
+    }
+  </style>
 </head>
-<body class="bg-brand font-sans">
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<body>
+  <div id="header-slot"></div>
 
-<div id="header-placeholder"></div>
-<main id="main-content">
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content px-4">
-    <div class="hero-badge">ADIP Certified &bull; Open 7 Days &bull; Bawadia Kalan, Bhopal</div>
-    <h1>Speech and Hearing<br>Care in Bhopal</h1>
-    <p>Dr. Mridula Rani and Dr. Prashant have been working with families across Bhopal for over 15 years. Whether you&rsquo;re concerned about your child&rsquo;s speech, noticing hearing difficulties, or following up after a cochlear implant &mdash; we&rsquo;ll assess carefully and give you straightforward guidance.</p>
-    <div class="hero-btns">
-      <a href="contact.html" class="btn btn-primary">Book an Appointment</a>
-      <a href="tel:+917980043162" class="btn btn-outline">+91 79800 43162</a>
-    </div>
-  </div>
-  <svg class="hero-wave" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,32 C360,60 1080,0 1440,32 L1440,60 L0,60 Z"/>
-  </svg>
-</section>
-
-<!-- TRUST STRIP -->
-<div class="bg-white py-5 shadow-sm">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-sm font-semibold text-gray-700">
-      <span>15+ Years Experience</span>
-      <span class="text-gray-200 hidden sm:inline">|</span>
-      <span>169+ Patients Helped</span>
-      <span class="text-gray-200 hidden sm:inline">|</span>
-      <span>4.8&#9733; on Justdial</span>
-      <span class="text-gray-200 hidden sm:inline">|</span>
-      <span>Open 7 Days &bull; 9 AM &ndash; 9 PM</span>
-      <span class="text-gray-200 hidden sm:inline">|</span>
-      <span>ADIP Certified Cochlear Implant Center</span>
-    </div>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<section class="py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="section-title">Our <span class="text-accent">Services</span></h2>
-    <p class="text-center text-gray-500 max-w-xl mx-auto mb-10 mt-3">We offer speech-language therapy and audiology services using modern equipment and evidence-based methods &mdash; all under one roof.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <div class="bg-white rounded-2xl p-7 shadow-sm border-t-4 border-transparent hover:border-primary hover:-translate-y-1 hover:shadow-md transition-all duration-300 animate-on-scroll">
-        <div class="w-14 h-14 bg-gradient-to-br from-[#00B8D4]/15 to-[#EC1E8C]/10 rounded-xl flex items-center justify-center mb-4">
-          <svg class="w-7 h-7 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
-          </svg>
-        </div>
-        <h3 class="font-bold text-gray-900 text-lg mb-2">Speech Therapy</h3>
-        <p class="text-gray-500 text-sm mb-4 leading-relaxed">For children and adults with speech delays, stammering, aphasia, voice disorders, and more.</p>
-        <a href="services.html#speech" class="text-primary-dark font-semibold text-sm hover:underline">Learn more &rarr;</a>
-      </div>
-
-      <div class="bg-white rounded-2xl p-7 shadow-sm border-t-4 border-transparent hover:border-primary hover:-translate-y-1 hover:shadow-md transition-all duration-300 animate-on-scroll stagger-1">
-        <div class="w-14 h-14 bg-gradient-to-br from-[#00B8D4]/15 to-[#EC1E8C]/10 rounded-xl flex items-center justify-center mb-4">
-          <svg class="w-7 h-7 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"/>
-          </svg>
-        </div>
-        <h3 class="font-bold text-gray-900 text-lg mb-2">Audiometry</h3>
-        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Comprehensive hearing assessments including PTA, BERA, and tympanometry for all ages.</p>
-        <a href="services.html#audiometry" class="text-primary-dark font-semibold text-sm hover:underline">Learn more &rarr;</a>
-      </div>
-
-      <div class="bg-white rounded-2xl p-7 shadow-sm border-t-4 border-transparent hover:border-primary hover:-translate-y-1 hover:shadow-md transition-all duration-300 animate-on-scroll stagger-2">
-        <div class="w-14 h-14 bg-gradient-to-br from-[#00B8D4]/15 to-[#EC1E8C]/10 rounded-xl flex items-center justify-center mb-4">
-          <svg class="w-7 h-7 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/>
-          </svg>
-        </div>
-        <h3 class="font-bold text-gray-900 text-lg mb-2">Hearing Aids</h3>
-        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Expert fitting and ongoing support for BTE, ITE, and CIC hearing aid styles.</p>
-        <a href="services.html#hearing-aids" class="text-primary-dark font-semibold text-sm hover:underline">Learn more &rarr;</a>
-      </div>
-
-      <div class="bg-white rounded-2xl p-7 shadow-sm border-t-4 border-transparent hover:border-primary hover:-translate-y-1 hover:shadow-md transition-all duration-300 animate-on-scroll stagger-3">
-        <div class="w-14 h-14 bg-gradient-to-br from-[#00B8D4]/15 to-[#EC1E8C]/10 rounded-xl flex items-center justify-center mb-4">
-          <svg class="w-7 h-7 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
-          </svg>
-        </div>
-        <h3 class="font-bold text-gray-900 text-lg mb-2">Cochlear Implant</h3>
-        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Pre-surgical counseling and post-implant auditory rehabilitation. ADIP certified center.</p>
-        <a href="services.html#cochlear" class="text-primary-dark font-semibold text-sm hover:underline">Learn more &rarr;</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- WHO WE ARE -->
-<section class="bg-white py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="animate-from-left">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest text-accent mb-3">About Prisha Clinic</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5 leading-tight">Founded by two specialists, <span class="text-primary">dedicated to one goal</span></h2>
-        <p class="text-gray-500 leading-relaxed mb-4">Prisha Speech Therapy and Hearing Clinic was founded by Dr. Mridula Rani and Dr. Prashant in Bawadia Kalan, Bhopal. Over 15 years, we&rsquo;ve helped hundreds of families across Madhya Pradesh with speech therapy, audiometry, hearing aids, and cochlear implant rehabilitation.</p>
-        <p class="text-gray-500 leading-relaxed mb-4">We are an official ADIP certified cochlear implant center under the Government of India, and our clinic has a dedicated play zone for children.</p>
-        <p class="text-gray-500 leading-relaxed mb-6">Consultation: <strong class="text-gray-700">&#8377;500</strong> &bull; Open Monday to Sunday, 9 AM &ndash; 9 PM</p>
-        <a href="about.html" class="btn btn-outline-primary">Meet the team &rarr;</a>
-      </div>
-      <div class="animate-from-right">
-        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-[#00B8D4] to-[#EC1E8C] flex flex-col items-center justify-center text-center p-10">
-          <div class="flex gap-4 mb-4">
-            <div class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center text-4xl">&#128105;&#8205;&#9877;&#65039;</div>
-            <div class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center text-4xl">&#128104;&#8205;&#9877;&#65039;</div>
+  <main id="main-content">
+    <!-- ========================= HERO ========================= -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="bilingual reveal">
+              <span class="hindi h">सुनिए। बोलिए। समझिए।</span>
+              <span class="sep">·</span>
+              <span class="eyebrow teal" style="margin: 0;">Speech &amp; Hearing · Bhopal</span>
+            </div>
+            <h1 class="hero-h reveal d1">
+              A calm, careful place to begin <em>speech</em> &amp; <em>hearing</em> care.
+            </h1>
+            <p class="hero-sub reveal d2">
+              Run by Dr. Mridula Rani and Dr. Prashant — two specialists who have been
+              listening to families in Bhopal for over fifteen years. Every assessment
+              is in person, unhurried, and explained the same day.
+            </p>
+            <div class="row reveal d3">
+              <a href="contact.html" class="btn btn-primary">
+                Book a consultation
+                <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10m0 0L9 4m4 4l-4 4"/></svg>
+              </a>
+              <a href="tel:+917980043162" class="btn btn-ghost">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +91 79800 43162
+              </a>
+            </div>
+            <div class="hero-meta reveal d4">
+              <span><b class="tnum">₹500</b> consultation</span>
+              <span>·</span>
+              <span>Open <b>Mon–Sun</b>, 9 — 21</span>
+              <span>·</span>
+              <span><b>Walk-ins</b> welcome</span>
+            </div>
           </div>
-          <p class="text-white font-bold text-lg">Dr. Mridula Rani &amp; Dr. Prashant</p>
-          <p class="text-white/75 text-sm mt-1">Bawadia Kalan, Bhopal &mdash; since 2009</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- TESTIMONIALS -->
-<section class="py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="section-title">What <span class="text-accent">Patients Say</span></h2>
-    <p class="text-center text-gray-500 max-w-lg mx-auto mb-10 mt-3">Real reviews from Google and Justdial. Rated 4.8/5 with 169+ reviews.</p>
-    <div class="testimonials-carousel" aria-label="Patient testimonials">
-      <div class="carousel-track">
-        <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>&ldquo;Mr. Prashant and Mrs. Mridula ji are highly qualified and very helpful audiologists! Their expertise in dealing with hearing difficulties and providing apt solutions is perfect. Thumbs up!&rdquo;</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">B</div>
-            <div><div class="author-name">Brajesh Lahri</div><div class="author-location">Google Local Guide &bull; Bhopal</div></div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>&ldquo;They gave us a lot of time to explain the problem, tell us what hearing aid will suit and why. It did not feel like a business transaction. Would highly recommend.&rdquo;</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">A</div>
-            <div><div class="author-name">Anushka Malik</div><div class="author-location">Google Local Guide &bull; Bhopal</div></div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>&ldquo;Not only have you given my son the gift of communication, you have given our whole family the gift of support and encouragement. This has meant more to us than you will ever know.&rdquo;</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">A</div>
-            <div><div class="author-name">Abhishek Malviya</div><div class="author-location">Google Local Guide &bull; Bhopal</div></div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>&ldquo;My son&rsquo;s speech was not clear and he wouldn&rsquo;t speak in full sentences. After therapy here, he started speaking in full sentences within months. Truly grateful!&rdquo;</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">K</div>
-            <div><div class="author-name">Khushboo Jalan</div><div class="author-location">Google Review &bull; Bhopal</div></div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>&ldquo;Both Prashant Sir and Mridula ma&rsquo;am are one of the most dedicated professionals you&rsquo;ll meet. They even kept the clinic open till 11 PM for two days to help us. Truly remarkable!&rdquo;</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">M</div>
-            <div><div class="author-name">Mini Priya</div><div class="author-location">Google Local Guide &bull; Bhopal</div></div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>&ldquo;For 10 years my child was misdiagnosed. They gave enough time, diagnosed correctly, and finally got his hearing checked properly. Highly recommended!&rdquo;</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">R</div>
-            <div><div class="author-name">Rajni Rajput</div><div class="author-location">Google Review &bull; Itarshi, MP</div></div>
+          <div class="hero-art reveal d2">
+            <div class="ph ph-main">
+              <span class="ph-corner">Image · Dr. Mridula in session</span>
+              <span class="ph-label">Drop in a real clinic photo</span>
+            </div>
+            <div class="ph ph-side ph-tint-teal">
+              <span class="ph-corner">Image · Audiometry booth</span>
+              <span class="ph-label">Drop in a real clinic photo</span>
+            </div>
+            <div class="badge rating">
+              <div class="num">4.8<span style="color: var(--gold);">★</span></div>
+              <div class="lbl">169 Google reviews</div>
+            </div>
+            <div class="badge adip">
+              <div class="seal">ADIP</div>
+              <div class="lbl-line">
+                <b>Govt. of India</b>
+                Cochlear implant centre
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="text-center mt-8">
-      <a href="https://www.google.com/maps/place/Prisha+Speech+Therapy+And+Hearing+Clinic/@23.1869929,77.4346639,17z" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">&#9733; Read All Google Reviews</a>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- GALLERY -->
-<section class="bg-white py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="section-title animate-on-scroll">Clinic <span class="text-accent">Gallery</span></h2>
-    <p class="text-center text-gray-500 max-w-lg mx-auto mb-10 mt-3 animate-on-scroll">A glimpse of our patient-friendly clinic in Bawadia Kalan, Bhopal.</p>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-      <div class="rounded-xl overflow-hidden aspect-[4/3] animate-on-scroll">
-        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&q=80"
-          alt="Doctor in a consultation session" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+    <!-- ========================= TRUST STRIP ========================= -->
+    <section class="trust-strip">
+      <div class="container">
+        <div class="trust-row">
+          <div class="item"><span class="num tnum">15+</span><span class="lbl">Years<br>practising</span></div>
+          <div class="item"><span class="num tnum">169</span><span class="lbl">Google<br>reviews</span></div>
+          <div class="item"><span class="num tnum">4.8<span style="color: var(--gold); font-size: 16px;">★</span></span><span class="lbl">Average<br>rating</span></div>
+          <div class="item"><span class="num">BERA</span><span class="lbl">Infant hearing<br>from 4 months</span></div>
+          <div class="item"><span class="num">ADIP</span><span class="lbl">Certified cochlear<br>implant centre</span></div>
+          <div class="item"><span class="num">7×</span><span class="lbl">Days a week<br>9 — 21</span></div>
+        </div>
       </div>
-      <div class="rounded-xl overflow-hidden aspect-[4/3] animate-on-scroll stagger-1">
-        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop&q=80"
-          alt="Audiometry hearing test equipment" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-      </div>
-      <div class="rounded-xl overflow-hidden aspect-[4/3] animate-on-scroll stagger-2">
-        <img src="https://images.unsplash.com/photo-1576765608535-5a7a87b31f2b?w=600&h=400&fit=crop&q=80"
-          alt="Speech therapy session with a young child" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-      </div>
-      <div class="rounded-xl overflow-hidden aspect-[4/3] animate-on-scroll">
-        <img src="https://images.unsplash.com/photo-1584820927498-cad076eece54?w=600&h=400&fit=crop&q=80"
-          alt="Hearing aid fitting and consultation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-      </div>
-      <div class="rounded-xl overflow-hidden aspect-[4/3] animate-on-scroll stagger-1">
-        <img src="https://images.unsplash.com/photo-1519494026892-3de6c4e3e4b8?w=600&h=400&fit=crop&q=80"
-          alt="Modern clinic reception area" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-      </div>
-      <div class="rounded-xl overflow-hidden aspect-[4/3] animate-on-scroll stagger-2">
-        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&h=400&fit=crop&q=80"
-          alt="Paediatric hearing assessment with a child" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-      </div>
-    </div>
-    <div class="text-center mt-8">
-      <a href="https://www.instagram.com/prishaclinic_/" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-accent transition-colors font-medium">See more on Instagram @prishaclinic_ &rarr;</a>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- CTA STRIP -->
-<section class="py-16 px-4" style="background:linear-gradient(135deg,#007A8A 0%,#00B8D4 45%,#EC1E8C 100%);">
-  <div class="max-w-2xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to get started?</h2>
-    <p class="text-white/80 mb-8 text-lg">Book a &#8377;500 consultation with Dr. Mridula Rani or Dr. Prashant. We&rsquo;re open every day, 9 AM to 9 PM.</p>
-    <div class="flex gap-4 justify-center flex-wrap">
-      <a href="contact.html" class="btn btn-outline">Book an Appointment</a>
-      <a href="https://wa.me/917980043162" target="_blank" rel="noopener noreferrer"
-        class="btn" style="background:#25D366;color:#fff;">Chat on WhatsApp</a>
-    </div>
-  </div>
-</section>
+    <!-- ========================= SERVICES ========================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-rule">
+          <span class="num">§ 01</span>
+          <span class="label">What we do</span>
+          <span class="line"></span>
+        </div>
 
-</main>
-<div id="footer-placeholder"></div>
-<script src="js/script.js"></script>
+        <div class="between" style="margin-bottom: 40px; align-items: flex-end; gap: 32px;">
+          <div>
+            <h2 class="display reveal" style="max-width: 22ch;">
+              Four areas of care, <em>practised in depth</em> by two specialists.
+            </h2>
+          </div>
+          <p class="lead reveal d1" style="max-width: 38ch; margin: 0;">
+            We do not run a long menu of services. We do a small number of things
+            carefully, with modern equipment, in a quiet room.
+          </p>
+        </div>
+
+        <div class="services-grid reveal d2">
+          <a class="svc" href="services.html#speech">
+            <div class="svc-num">01 / SPEECH</div>
+            <h3>Speech &amp; language therapy</h3>
+            <p>For toddlers not yet talking, school-age stammers, adults after a stroke. Individual plans, weekly progress reviews.</p>
+            <div class="svc-tags">
+              <span>Speech delay</span><span>Stammering</span><span>Aphasia</span><span>Voice</span>
+            </div>
+            <span class="svc-link">View details <svg class="arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10m0 0L9 4m4 4l-4 4"/></svg></span>
+          </a>
+
+          <a class="svc" href="services.html#audiometry">
+            <div class="svc-num">02 / HEARING</div>
+            <h3>Audiometry &amp; BERA</h3>
+            <p>Painless hearing tests from newborn screening to adult diagnostics. Sound-treated booth. Same-day reports.</p>
+            <div class="svc-tags">
+              <span>PTA</span><span>BERA</span><span>Tympanometry</span><span>Newborn screening</span>
+            </div>
+            <span class="svc-link">View details <svg class="arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10m0 0L9 4m4 4l-4 4"/></svg></span>
+          </a>
+
+          <a class="svc" href="services.html#hearing-aids">
+            <div class="svc-num">03 / FITTING</div>
+            <h3>Hearing aids</h3>
+            <p>BTE, ITE and CIC styles. Trial fittings without pressure. Long-term tuning and follow-ups included.</p>
+            <div class="svc-tags">
+              <span>BTE</span><span>ITE</span><span>CIC</span><span>Trial fittings</span>
+            </div>
+            <span class="svc-link">View details <svg class="arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10m0 0L9 4m4 4l-4 4"/></svg></span>
+          </a>
+
+          <a class="svc" href="services.html#cochlear">
+            <div class="svc-num">04 / IMPLANT</div>
+            <h3>Cochlear implant therapy</h3>
+            <p>ADIP-certified centre. Pre-surgery counselling and structured post-implant auditory verbal rehabilitation.</p>
+            <div class="svc-tags">
+              <span>Pre-implant</span><span>AVT</span><span>ADIP scheme</span>
+            </div>
+            <span class="svc-link">View details <svg class="arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10m0 0L9 4m4 4l-4 4"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= THE TEAM ========================= -->
+    <section class="section" style="background: var(--paper);">
+      <div class="container">
+        <div class="section-rule">
+          <span class="num">§ 02</span>
+          <span class="label">The team</span>
+          <span class="line"></span>
+        </div>
+
+        <h2 class="display reveal" style="max-width: 24ch; margin-bottom: 56px;">
+          Two specialists. <em>Same room.</em> Every consultation.
+        </h2>
+
+        <div class="docs-grid">
+          <div class="doc-card reveal">
+            <div class="ph ph-tint-marigold">
+              <span class="ph-corner">Portrait · Dr. Mridula Rani</span>
+              <span class="ph-label">Drop in real portrait</span>
+            </div>
+            <h3>Dr. Mridula Rani</h3>
+            <p class="role">Speech-Language Therapist &amp; Audiologist <span class="dot">·</span> Co-founder</p>
+            <p>
+              Leads the speech-language side of the practice. Known for patient, child-led sessions
+              and detailed home plans. Her work spans toddlers with delayed milestones, adults
+              recovering language after stroke, and post-implant rehabilitation.
+            </p>
+            <div class="doc-tags">
+              <span>Speech-Language Pathology</span>
+              <span>Cochlear rehab</span>
+              <span>Paediatric</span>
+              <span>15+ yrs</span>
+            </div>
+          </div>
+
+          <div class="doc-card reveal d1">
+            <div class="ph ph-tint-teal">
+              <span class="ph-corner">Portrait · Dr. Prashant</span>
+              <span class="ph-label">Drop in real portrait</span>
+            </div>
+            <h3>Dr. Prashant</h3>
+            <p class="role">Audiologist &amp; Hearing Aid Specialist <span class="dot">·</span> Co-founder</p>
+            <p>
+              Handles the audiology side — diagnostics, hearing aid fitting and cochlear implant
+              counselling. Patients consistently note that he takes time to explain
+              results and never pushes a product.
+            </p>
+            <div class="doc-tags">
+              <span>Audiology</span>
+              <span>BERA &amp; PTA</span>
+              <span>Hearing aid fitting</span>
+              <span>ADIP counselling</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hairline" style="margin: 64px 0 40px;"></div>
+
+        <div class="reveal" style="justify-content: center; text-align: center;">
+          <div style="max-width: 60ch; margin: 0 auto; text-align: center;">
+            <p class="pull-quote">
+              <span class="mark">"</span>They gave us a lot of time to explain the problem,
+              tell us what hearing aid will suit and <em>why</em>. It did not feel like a
+              business transaction.
+            </p>
+            <p class="muted" style="margin-top: 18px; font-size: 13px; letter-spacing: 0.04em;">
+              <b style="color: var(--ink);">Anushka Malik</b> · Google Local Guide · Bhopal
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= HOW A VISIT WORKS ========================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-rule">
+          <span class="num">§ 03</span>
+          <span class="label">How a visit works</span>
+          <span class="line"></span>
+        </div>
+
+        <div class="between" style="align-items: flex-end; gap: 32px; flex-wrap: wrap;">
+          <h2 class="display reveal" style="max-width: 20ch;">
+            From your first call <em>to ongoing care.</em>
+          </h2>
+          <p class="lead reveal d1" style="max-width: 38ch; margin: 0;">
+            No mystery, no surprise charges. Here is what happens, in order.
+          </p>
+        </div>
+
+        <div class="visit-flow reveal d2">
+          <div class="step">
+            <div class="step-num">01 · CALL</div>
+            <h4>Reach out</h4>
+            <p>Call, WhatsApp or fill the form. We confirm a time the same day.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">02 · VISIT</div>
+            <h4>First consultation</h4>
+            <p>30–45 minutes with Dr. Mridula or Dr. Prashant. ₹500. We listen first.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">03 · TEST</div>
+            <h4>Assess carefully</h4>
+            <p>Hearing screen, language probe, or BERA — whatever your concern calls for.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">04 · PLAN</div>
+            <h4>A written plan</h4>
+            <p>You leave with a clear, honest path forward and an estimated timeline.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">05 · FOLLOW</div>
+            <h4>Stay in touch</h4>
+            <p>Progress reviews, home practice support, and reachable between sessions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= REVIEWS ========================= -->
+    <section class="section" style="background: var(--paper);">
+      <div class="container">
+        <div class="section-rule">
+          <span class="num">§ 04</span>
+          <span class="label">Patient voices</span>
+          <span class="line"></span>
+        </div>
+
+        <div class="between" style="margin-bottom: 40px; align-items: flex-end; gap: 32px;">
+          <h2 class="display reveal" style="max-width: 24ch;">
+            <em>169 reviews.</em> Here are a few in their own words.
+          </h2>
+          <a href="https://www.google.com/maps/place/Prisha+Speech+Therapy+And+Hearing+Clinic/@23.1869929,77.4346639,17z" target="_blank" rel="noopener" class="btn btn-ghost reveal d1">
+            Read all on Google
+            <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4m0 0H6m6 0v6"/></svg>
+          </a>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review feature reveal">
+            <div class="stars">★★★★★</div>
+            <p class="body">
+              Not only have you given my son the gift of communication — you have given our whole family the gift of support and encouragement. This has meant more to us than you will ever know.
+            </p>
+            <div class="author">
+              <div class="avatar">A</div>
+              <div>
+                <div class="author-name">Abhishek Malviya</div>
+                <div class="author-meta">Google Local Guide · Bhopal</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review reveal d1">
+            <div class="stars">★★★★★</div>
+            <p class="body">
+              For ten years my child was misdiagnosed. They gave enough time, diagnosed correctly, and finally got his hearing checked properly.
+            </p>
+            <div class="author">
+              <div class="avatar">R</div>
+              <div>
+                <div class="author-name">Rajni Rajput</div>
+                <div class="author-meta">Google Review · Itarshi, MP</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review reveal d2">
+            <div class="stars">★★★★★</div>
+            <p class="body">
+              Both Prashant Sir and Mridula ma'am are among the most dedicated professionals you'll meet. They even kept the clinic open till 11 PM for two days to help us.
+            </p>
+            <div class="author">
+              <div class="avatar">M</div>
+              <div>
+                <div class="author-name">Mini Priya</div>
+                <div class="author-meta">Google Local Guide · Bhopal</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-grid" style="margin-top: 24px;">
+          <div class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p class="body" style="font-size: 19px;">
+              My son's speech was not clear and he wouldn't speak in full sentences. After therapy here, he started speaking in full sentences within months. Truly grateful.
+            </p>
+            <div class="author">
+              <div class="avatar">K</div>
+              <div>
+                <div class="author-name">Khushboo Jalan</div>
+                <div class="author-meta">Google Review · Bhopal</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review reveal d1">
+            <div class="stars">★★★★★</div>
+            <p class="body" style="font-size: 19px;">
+              The clinic is well-maintained and equipped with modern facilities. The therapists and staff are professional, knowledgeable, and genuinely compassionate.
+            </p>
+            <div class="author">
+              <div class="avatar">S</div>
+              <div>
+                <div class="author-name">Subhasmita Sahoo</div>
+                <div class="author-meta">Google Review · Bhopal</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review reveal d2">
+            <div class="stars">★★★★★</div>
+            <p class="body" style="font-size: 19px;">
+              Mr. Prashant and Mrs. Mridula ji are highly qualified and very helpful. Their expertise in providing apt solutions is perfect.
+            </p>
+            <div class="author">
+              <div class="avatar">B</div>
+              <div>
+                <div class="author-name">Brajesh Lahri</div>
+                <div class="author-meta">Google Local Guide · Bhopal</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= LOCATION ========================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-rule">
+          <span class="num">§ 05</span>
+          <span class="label">Visit the clinic</span>
+          <span class="line"></span>
+        </div>
+
+        <div class="loc-grid reveal">
+          <div class="loc-card">
+            <div>
+              <h3 class="display" style="font-size: 32px; margin-bottom: 6px;">Bawadia Kalan, Bhopal</h3>
+              <p class="muted" style="font-size: 14px;">Near Galaxy Towers · easy parking · ground floor</p>
+            </div>
+
+            <div class="loc-row">
+              <div class="ic">A</div>
+              <div>
+                <h5>Address</h5>
+                <p>B49 Jai Bhawani Society<br>Near Galaxy Towers, Bawadia Kalan<br>Bhopal — 462026, Madhya Pradesh</p>
+              </div>
+            </div>
+
+            <div class="loc-row">
+              <div class="ic">H</div>
+              <div>
+                <h5>Hours</h5>
+                <p>Monday — Sunday<br>9:00 AM — 9:00 PM</p>
+              </div>
+            </div>
+
+            <div class="loc-row">
+              <div class="ic">P</div>
+              <div>
+                <h5>Phone</h5>
+                <p><a href="tel:+917980043162">+91 79800 43162</a></p>
+              </div>
+            </div>
+
+            <div class="row" style="margin-top: 8px;">
+              <a href="https://www.google.com/maps/place/Prisha+Speech+Therapy+And+Hearing+Clinic/@23.1869929,77.4346639,17z" target="_blank" rel="noopener" class="btn btn-primary">Get directions</a>
+              <a href="https://wa.me/917980043162" target="_blank" rel="noopener" class="btn btn-whats">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A12 12 0 003.48 20.52L2 22l1.55-1.43A12 12 0 1020.52 3.48z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.0!2d77.4346639!3d23.1869929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43c0a4849ea3%3A0x17330184d403c9f6!2sPrisha%20Speech%20Therapy%20And%20Hearing%20Clinic!5e0!3m2!1sen!2sin!4v1684567890123!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Prisha Speech Therapy and Hearing Clinic, Bawadia Kalan, Bhopal"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= CTA ========================= -->
+    <section class="cta-strip">
+      <div class="container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 56px; align-items: end;">
+        <div>
+          <span class="eyebrow" style="color: var(--marigold);">Begin today</span>
+          <h2>If you're worried about a delay, a sound, or a silence — <em>let's listen together.</em></h2>
+          <p>₹500 first consultation with Dr. Mridula Rani or Dr. Prashant. Call ahead, walk in, or message on WhatsApp. Open every day.</p>
+          <div class="row">
+            <a href="contact.html" class="btn btn-light">Book a consultation</a>
+            <a href="https://wa.me/917980043162" target="_blank" rel="noopener" class="btn btn-ghost-light">Message on WhatsApp →</a>
+          </div>
+        </div>
+        <div style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; padding-bottom: 8px;">
+          <div style="font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em; color: rgba(255,255,255,0.4); margin-bottom: 10px;">QUICK INFO</div>
+          <div>· Mon–Sun · 9 AM — 9 PM</div>
+          <div>· Walk-ins welcome alongside booked slots</div>
+          <div>· Pay by cash or UPI</div>
+          <div>· English · हिन्दी · Easy parking</div>
+          <div style="margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <span class="hindi" style="color: rgba(255,255,255,0.85); font-style: italic;">हम सुनने को तैयार हैं।</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
