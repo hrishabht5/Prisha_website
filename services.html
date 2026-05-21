@@ -21,7 +21,6 @@
   <meta name="geo.placename" content="Bhopal, Madhya Pradesh">
   <link rel="canonical" href="https://prishaclinic.in/services.html">
   <title>Speech Therapy & Audiometry Services in Bhopal | Prisha Clinic</title>
-  <!-- TODO: Replace prishaclinic.in with your actual domain -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -67,244 +66,348 @@
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#00B8D4',
-            'primary-dark': '#0090A8',
-            accent: '#EC1E8C',
-            gold: '#F5A623',
-            brand: '#F5FDFF'
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
-        }
-      }
+
+  <!-- Fonts — same as homepage -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    .skip-link { position:absolute; top:-100%; left:1rem; background:var(--marigold); color:#fff; padding:.5rem 1.25rem; border-radius:var(--radius); z-index:9999; font-weight:600; transition:top .2s; }
+    .skip-link:focus { top:1rem; }
+
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+    @media (max-width:880px) {
+      .two-col { grid-template-columns:1fr; gap:40px; }
+      .two-col.flip > *:first-child { order:2; }
+      .two-col.flip > *:last-child  { order:1; }
     }
-  </script>
-  <link rel="stylesheet" href="css/style.css">
+
+    .three-col { display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; }
+    @media (max-width:880px) { .three-col { grid-template-columns:1fr 1fr; } }
+    @media (max-width:560px) { .three-col { grid-template-columns:1fr; } }
+
+    .svc-icon { aspect-ratio:1/1; max-width:320px; margin:0 auto; width:100%; border-radius:var(--radius-lg); display:flex; align-items:center; justify-content:center; }
+    .svc-icon svg { width:88px; height:88px; }
+
+    .tag { display:inline-flex; align-items:center; padding:5px 12px; border-radius:999px; font-size:12px; font-weight:500; background:rgba(0,184,212,.09); color:var(--marigold-2); border:1px solid rgba(0,184,212,.2); }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+
+    .faq-item { border:1px solid var(--line); border-radius:var(--radius-lg); overflow:hidden; margin-bottom:10px; background:var(--paper); }
+    .faq-q { width:100%; background:none; border:none; text-align:left; cursor:pointer; padding:20px 24px; display:flex; justify-content:space-between; align-items:center; gap:16px; font-family:var(--font-sans); font-size:15px; font-weight:500; color:var(--ink); line-height:1.4; }
+    .faq-q:hover { background:rgba(0,0,0,.02); }
+    .faq-arrow { flex-shrink:0; width:20px; height:20px; border-radius:50%; background:var(--line); display:flex; align-items:center; justify-content:center; transition:transform .25s, background .2s; font-size:11px; color:var(--ink-2); }
+    .faq-item.open .faq-arrow { transform:rotate(180deg); background:var(--marigold); color:#fff; }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+    .faq-a-inner { padding:0 24px 20px; font-size:14px; color:var(--ink-2); line-height:1.8; }
+    .faq-a-inner p + p { margin-top:.75rem; }
+
+    .cta-strip { background:linear-gradient(135deg,#007A8A 0%,#00B8D4 45%,#EC1E8C 100%); color:#fff; padding:88px 0; position:relative; overflow:hidden; }
+    .cta-strip::before { content:""; position:absolute; inset:0; background:radial-gradient(ellipse at 80% 20%,rgba(255,255,255,.08),transparent 55%); pointer-events:none; }
+    .cta-strip .container { position:relative; z-index:1; text-align:center; }
+    .cta-strip h2 { font-family:var(--font-display); font-weight:400; font-size:clamp(28px,3.6vw,48px); line-height:1.1; letter-spacing:-.02em; color:#fff; margin-bottom:16px; text-wrap:balance; }
+    .cta-strip p { color:rgba(255,255,255,.75); font-size:16px; max-width:50ch; margin:0 auto 32px; }
+    .btn-ghost-light { background:rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.4) !important; }
+    .btn-ghost-light:hover { background:#fff; color:var(--ink); border-color:#fff !important; }
+  </style>
 </head>
-<body class="bg-brand font-sans">
+<body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div id="header-placeholder"></div>
+<div id="header-slot"></div>
 <main id="main-content">
 
-<!-- PAGE BANNER -->
-<section class="page-banner">
-  <h1>Our Services</h1>
-  <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Services</p>
-</section>
-
-<!-- INTRO -->
-<section class="py-12 px-4">
-  <div class="max-w-2xl mx-auto text-center">
-    <p class="text-gray-500 leading-relaxed text-lg animate-on-scroll">We offer a full range of speech-language and audiology services in Bhopal. All under one roof, using modern equipment, with results explained on the same day.</p>
+<!-- PAGE HEADER -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-rule">
+      <span class="num">§ 00</span>
+      <span class="label">Services</span>
+      <span class="line"></span>
+    </div>
+    <span class="eyebrow reveal">Prisha Speech &amp; Hearing · Bhopal</span>
+    <h1 class="display reveal d1" style="margin:16px 0 20px; max-width:22ch;">Four areas of care, <em>practised in depth.</em></h1>
+    <p class="lead reveal d2" style="max-width:54ch;">Speech therapy, audiometry, hearing aid fitting, and cochlear implant rehabilitation &mdash; all under one roof, with results explained to you on the same day.</p>
   </div>
 </section>
 
 <!-- SERVICE 1: SPEECH THERAPY -->
-<section id="speech" class="py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="aspect-square max-w-xs mx-auto w-full rounded-2xl bg-gradient-to-br from-[#00B8D4]/15 to-[#EC1E8C]/12 flex items-center justify-center animate-from-left">
-        <svg class="w-24 h-24 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
-        </svg>
+<section id="speech" class="section" style="background:var(--paper);">
+  <div class="container">
+    <div class="section-rule">
+      <span class="num">§ 01</span>
+      <span class="label">Speech therapy</span>
+      <span class="line"></span>
+    </div>
+    <div class="two-col">
+      <div class="reveal">
+        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(0,184,212,.10),rgba(236,30,140,.07));">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
+          </svg>
+        </div>
       </div>
-      <div class="animate-from-right">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest text-accent mb-3">Service 01</span>
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Speech Therapy</h2>
-        <div class="space-y-3 text-gray-500 leading-relaxed mb-5">
+      <div class="reveal d1">
+        <span class="eyebrow teal">Service 01</span>
+        <h2 class="display" style="font-size:clamp(26px,2.8vw,38px); margin:12px 0 20px;">Speech Therapy</h2>
+        <div class="stack-16" style="color:var(--ink-2); font-size:15px; line-height:1.8; margin-bottom:20px;">
           <p>Speech therapy at Prisha Clinic helps children and adults overcome a wide range of communication challenges. Dr. Mridula Rani conducts a detailed assessment and builds an individualised therapy plan designed to achieve measurable progress.</p>
           <p>Whether your child has delayed speech, your teenager stammers, or you&rsquo;re recovering from a stroke-related language disorder &mdash; we provide structured, patient-centred support every step of the way.</p>
         </div>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Stuttering / Stammering</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Aphasia</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Voice Disorders</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Autism Speech Delays</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Articulation Disorders</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Language Delay</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Dysarthria</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Selective Mutism</span>
+        <div class="tags">
+          <span class="tag">Stuttering / Stammering</span>
+          <span class="tag">Aphasia</span>
+          <span class="tag">Voice Disorders</span>
+          <span class="tag">Autism Speech Delays</span>
+          <span class="tag">Articulation Disorders</span>
+          <span class="tag">Language Delay</span>
+          <span class="tag">Dysarthria</span>
+          <span class="tag">Selective Mutism</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Book a Speech Therapy Session</a>
+        <a href="contact.html" class="btn btn-primary">Book a speech therapy session</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SERVICE 2: AUDIOMETRY -->
-<section id="audiometry" class="bg-white py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="animate-from-left">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest text-accent mb-3">Service 02</span>
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Audiometry</h2>
-        <div class="space-y-3 text-gray-500 leading-relaxed mb-5">
+<section id="audiometry" class="section">
+  <div class="container">
+    <div class="section-rule">
+      <span class="num">§ 02</span>
+      <span class="label">Audiometry</span>
+      <span class="line"></span>
+    </div>
+    <div class="two-col flip">
+      <div class="reveal d1">
+        <span class="eyebrow">Service 02</span>
+        <h2 class="display" style="font-size:clamp(26px,2.8vw,38px); margin:12px 0 20px;">Audiometry</h2>
+        <div class="stack-16" style="color:var(--ink-2); font-size:15px; line-height:1.8; margin-bottom:20px;">
           <p>Our hearing assessments identify the type and degree of hearing loss quickly and accurately. All tests are painless, non-invasive, and carried out in a sound-treated environment with results explained on the same day.</p>
-          <p>We also offer <strong class="text-gray-700">BERA (Brainstem Evoked Response Audiometry)</strong> &mdash; a specialised test for infants, young children, and cases where conventional audiometry is not possible. We&rsquo;ve conducted BERA tests on babies as young as 4 months old.</p>
+          <p>We also offer <strong style="color:var(--ink);">BERA (Brainstem Evoked Response Audiometry)</strong> &mdash; a specialised test for infants, young children, and cases where conventional audiometry is not possible. We&rsquo;ve conducted BERA tests on babies as young as 4 months old.</p>
           <p>Early detection of hearing loss is critical &mdash; especially in children &mdash; to ensure proper speech and language development.</p>
         </div>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Pure-Tone Audiometry (PTA)</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Speech Audiometry</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Impedance / Tympanometry</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">BERA Test</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Paediatric Testing</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Newborn Hearing Screening</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Tinnitus Assessment</span>
+        <div class="tags">
+          <span class="tag">Pure-Tone Audiometry (PTA)</span>
+          <span class="tag">Speech Audiometry</span>
+          <span class="tag">Impedance / Tympanometry</span>
+          <span class="tag">BERA Test</span>
+          <span class="tag">Paediatric Testing</span>
+          <span class="tag">Newborn Hearing Screening</span>
+          <span class="tag">Tinnitus Assessment</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Book a Hearing Test</a>
+        <a href="contact.html" class="btn btn-primary">Book a hearing test</a>
       </div>
-      <div class="aspect-square max-w-xs mx-auto w-full rounded-2xl bg-gradient-to-br from-[#EC1E8C]/12 to-[#00B8D4]/15 flex items-center justify-center animate-from-right">
-        <svg class="w-24 h-24 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"/>
-        </svg>
+      <div class="reveal">
+        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(236,30,140,.08),rgba(0,184,212,.10));">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--marigold-2)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"/>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SERVICE 3: HEARING AIDS -->
-<section id="hearing-aids" class="py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="aspect-square max-w-xs mx-auto w-full rounded-2xl bg-gradient-to-br from-[#00B8D4]/15 to-[#EC1E8C]/12 flex items-center justify-center animate-from-left">
-        <svg class="w-24 h-24 text-primary-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/>
-        </svg>
+<section id="hearing-aids" class="section" style="background:var(--paper);">
+  <div class="container">
+    <div class="section-rule">
+      <span class="num">§ 03</span>
+      <span class="label">Hearing aids</span>
+      <span class="line"></span>
+    </div>
+    <div class="two-col">
+      <div class="reveal">
+        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(0,184,212,.10),rgba(236,30,140,.07));">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/>
+          </svg>
+        </div>
       </div>
-      <div class="animate-from-right">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest text-accent mb-3">Service 03</span>
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Hearing Aids &amp; Fitting</h2>
-        <div class="space-y-3 text-gray-500 leading-relaxed mb-5">
+      <div class="reveal d1">
+        <span class="eyebrow teal">Service 03</span>
+        <h2 class="display" style="font-size:clamp(26px,2.8vw,38px); margin:12px 0 20px;">Hearing Aids &amp; Fitting</h2>
+        <div class="stack-16" style="color:var(--ink-2); font-size:15px; line-height:1.8; margin-bottom:20px;">
           <p>Choosing the right hearing aid matters. At Prisha Clinic, we guide you through the selection, trial fitting, and fine-tuning process so your hearing aid fits well and performs properly in your daily environment &mdash; without pressure to buy before you&rsquo;re ready.</p>
           <p>We offer ongoing adjustment sessions and long-term follow-up care. Hearing aids need time and calibration to work well, and we stay involved throughout that process.</p>
         </div>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">BTE (Behind the Ear)</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">ITE (In the Ear)</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">CIC (Completely in Canal)</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Trial Fittings</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Programming &amp; Tuning</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Long-Term Support</span>
+        <div class="tags">
+          <span class="tag">BTE (Behind the Ear)</span>
+          <span class="tag">ITE (In the Ear)</span>
+          <span class="tag">CIC (Completely in Canal)</span>
+          <span class="tag">Trial Fittings</span>
+          <span class="tag">Programming &amp; Tuning</span>
+          <span class="tag">Long-Term Support</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Enquire About Hearing Aids</a>
+        <a href="contact.html" class="btn btn-primary">Enquire about hearing aids</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SERVICE 4: COCHLEAR IMPLANT -->
-<section id="cochlear" class="bg-white py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="animate-from-left">
-        <span class="inline-block text-xs font-bold uppercase tracking-widest text-accent mb-3">Service 04 &bull; ADIP Certified Center</span>
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Cochlear Implant Therapy</h2>
-        <div class="space-y-3 text-gray-500 leading-relaxed mb-5">
+<section id="cochlear" class="section">
+  <div class="container">
+    <div class="section-rule">
+      <span class="num">§ 04</span>
+      <span class="label">Cochlear implant therapy · ADIP certified</span>
+      <span class="line"></span>
+    </div>
+    <div class="two-col flip">
+      <div class="reveal d1">
+        <span class="eyebrow">Service 04 &bull; ADIP Certified Centre</span>
+        <h2 class="display" style="font-size:clamp(26px,2.8vw,38px); margin:12px 0 20px;">Cochlear Implant Therapy</h2>
+        <div class="stack-16" style="color:var(--ink-2); font-size:15px; line-height:1.8; margin-bottom:20px;">
           <p>Prisha Clinic is an official cochlear implant therapy centre under the Government of India&rsquo;s ADIP scheme. We provide end-to-end support for cochlear implant candidates &mdash; from pre-surgical counselling to comprehensive post-implant auditory rehabilitation.</p>
           <p>Post-surgical therapy is critical to success. Our structured rehabilitation programme includes auditory verbal therapy, listening exercises, and speech production training, helping patients develop meaningful hearing and communication skills over time.</p>
         </div>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Pre-Implant Counseling</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Post-Surgical Rehabilitation</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Auditory Verbal Therapy</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Listening Training</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">Speech Production</span>
-          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#00B8D4]/10 text-primary-dark border border-[#00B8D4]/20">ADIP Scheme Support</span>
+        <div class="tags">
+          <span class="tag">Pre-Implant Counseling</span>
+          <span class="tag">Post-Surgical Rehabilitation</span>
+          <span class="tag">Auditory Verbal Therapy</span>
+          <span class="tag">Listening Training</span>
+          <span class="tag">Speech Production</span>
+          <span class="tag">ADIP Scheme Support</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Book Cochlear Implant Consultation</a>
+        <a href="contact.html" class="btn btn-primary">Book cochlear implant consultation</a>
       </div>
-      <div class="aspect-square max-w-xs mx-auto w-full rounded-2xl bg-gradient-to-br from-[#EC1E8C]/12 to-[#00B8D4]/15 flex items-center justify-center animate-from-right">
-        <svg class="w-24 h-24 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
-        </svg>
+      <div class="reveal">
+        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(236,30,140,.08),rgba(0,184,212,.10));">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--marigold-2)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="py-16 px-4">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="section-title animate-on-scroll">Frequently Asked <span class="text-accent">Questions</span></h2>
-    <p class="text-center text-gray-500 mb-10 mt-3 animate-on-scroll">Common questions from patients and families. Don&rsquo;t see yours? <a href="contact.html" class="text-accent font-semibold hover:underline">Contact us directly.</a></p>
-    <div class="space-y-3">
-      <div class="faq-item bg-white rounded-xl border border-[#00B8D4]/15 overflow-hidden animate-on-scroll">
-        <button class="faq-question">
+<section class="section" style="background:var(--paper);">
+  <div class="container-narrow">
+    <div class="section-rule">
+      <span class="num">§ 05</span>
+      <span class="label">Common questions</span>
+      <span class="line"></span>
+    </div>
+    <h2 class="display reveal" style="font-size:clamp(26px,2.8vw,38px); margin-bottom:8px; max-width:24ch;">Frequently asked <em>questions</em></h2>
+    <p class="reveal d1" style="color:var(--ink-2); font-size:15px; margin-bottom:40px;">Don&rsquo;t see yours? <a href="contact.html" style="color:var(--marigold-2); font-weight:500;">Contact us directly.</a></p>
+
+    <div id="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
           Who needs speech therapy?
-          <span class="faq-arrow text-primary">&#9660;</span>
+          <span class="faq-arrow">&#9660;</span>
         </button>
-        <div class="faq-answer">
-          <p>Speech therapy is recommended for children with delayed speech or language milestones, children who stammer or stutter, individuals with articulation disorders, adults who have experienced stroke or brain injury affecting communication, and people with voice disorders. If you or your child is having difficulty communicating clearly, a consultation can help determine if therapy is needed.</p>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">
+            <p>Speech therapy is recommended for children with delayed speech or language milestones, children who stammer or stutter, individuals with articulation disorders, adults who have experienced stroke or brain injury affecting communication, and people with voice disorders. If you or your child is having difficulty communicating clearly, a consultation can help determine if therapy is needed.</p>
+          </div>
         </div>
       </div>
-      <div class="faq-item bg-white rounded-xl border border-[#00B8D4]/15 overflow-hidden animate-on-scroll">
-        <button class="faq-question">
+
+      <div class="faq-item reveal d1">
+        <button class="faq-q" aria-expanded="false">
           At what age should I get my child&rsquo;s hearing tested?
-          <span class="faq-arrow text-primary">&#9660;</span>
+          <span class="faq-arrow">&#9660;</span>
         </button>
-        <div class="faq-answer">
-          <p>Newborn hearing screening is recommended at birth. For all children, a hearing evaluation is recommended if parents notice that the child is not responding to sounds, is slow to develop speech, or frequently asks for things to be repeated. Early detection leads to significantly better outcomes for speech and language development.</p>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">
+            <p>Newborn hearing screening is recommended at birth. For all children, a hearing evaluation is recommended if parents notice that the child is not responding to sounds, is slow to develop speech, or frequently asks for things to be repeated. Early detection leads to significantly better outcomes for speech and language development.</p>
+          </div>
         </div>
       </div>
-      <div class="faq-item bg-white rounded-xl border border-[#00B8D4]/15 overflow-hidden animate-on-scroll">
-        <button class="faq-question">
+
+      <div class="faq-item reveal d1">
+        <button class="faq-q" aria-expanded="false">
           How many sessions does speech therapy take?
-          <span class="faq-arrow text-primary">&#9660;</span>
+          <span class="faq-arrow">&#9660;</span>
         </button>
-        <div class="faq-answer">
-          <p>The number of sessions varies significantly depending on the type and severity of the disorder, the patient&rsquo;s age, and how consistently home practice is done between sessions. Some patients see improvement in 8&ndash;12 sessions; others with more complex needs may require several months of ongoing therapy. Dr. Mridula Rani will provide a realistic estimate during your initial assessment.</p>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">
+            <p>The number of sessions varies significantly depending on the type and severity of the disorder, the patient&rsquo;s age, and how consistently home practice is done between sessions. Some patients see improvement in 8&ndash;12 sessions; others with more complex needs may require several months of ongoing therapy. Dr. Mridula Rani will provide a realistic estimate during your initial assessment.</p>
+          </div>
         </div>
       </div>
-      <div class="faq-item bg-white rounded-xl border border-[#00B8D4]/15 overflow-hidden animate-on-scroll">
-        <button class="faq-question">
+
+      <div class="faq-item reveal d2">
+        <button class="faq-q" aria-expanded="false">
           Is audiometry painful? What is a BERA test?
-          <span class="faq-arrow text-primary">&#9660;</span>
+          <span class="faq-arrow">&#9660;</span>
         </button>
-        <div class="faq-answer">
-          <p>No, audiometry is completely painless and non-invasive. The tests involve listening to tones through headphones and responding when you hear them. The entire evaluation takes 30&ndash;45 minutes.</p>
-          <p style="margin-top:0.75rem;">A <strong>BERA (Brainstem Evoked Response Audiometry)</strong> test is a specialised, painless hearing test used for infants, very young children, and patients who cannot respond to conventional testing. It measures the brain&rsquo;s response to sound via small electrodes placed on the scalp. At Prisha Clinic, we have conducted BERA tests on babies as young as 4 months old.</p>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">
+            <p>No, audiometry is completely painless and non-invasive. The tests involve listening to tones through headphones and responding when you hear them. The entire evaluation takes 30&ndash;45 minutes.</p>
+            <p>A <strong>BERA (Brainstem Evoked Response Audiometry)</strong> test is a specialised, painless hearing test used for infants, very young children, and patients who cannot respond to conventional testing. It measures the brain&rsquo;s response to sound via small electrodes placed on the scalp. At Prisha Clinic, we have conducted BERA tests on babies as young as 4 months old.</p>
+          </div>
         </div>
       </div>
-      <div class="faq-item bg-white rounded-xl border border-[#00B8D4]/15 overflow-hidden animate-on-scroll">
-        <button class="faq-question">
+
+      <div class="faq-item reveal d2">
+        <button class="faq-q" aria-expanded="false">
           Are hearing aids covered by insurance in India?
-          <span class="faq-arrow text-primary">&#9660;</span>
+          <span class="faq-arrow">&#9660;</span>
         </button>
-        <div class="faq-answer">
-          <p>Coverage depends on your specific insurance policy. Some government health schemes and private insurance plans do provide partial or full coverage for hearing aids. For persons with disabilities, the Government of India&rsquo;s ADIP scheme provides financial assistance for assistive devices including hearing aids and cochlear implants. Our team can help guide you through the available options during your consultation.</p>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">
+            <p>Coverage depends on your specific insurance policy. Some government health schemes and private insurance plans do provide partial or full coverage for hearing aids. For persons with disabilities, the Government of India&rsquo;s ADIP scheme provides financial assistance for assistive devices including hearing aids and cochlear implants. Our team can help guide you through the available options during your consultation.</p>
+          </div>
         </div>
       </div>
-      <div class="faq-item bg-white rounded-xl border border-[#00B8D4]/15 overflow-hidden animate-on-scroll">
-        <button class="faq-question">
+
+      <div class="faq-item reveal d3">
+        <button class="faq-q" aria-expanded="false">
           What is the difference between a hearing aid and a cochlear implant?
-          <span class="faq-arrow text-primary">&#9660;</span>
+          <span class="faq-arrow">&#9660;</span>
         </button>
-        <div class="faq-answer">
-          <p>A hearing aid amplifies sounds so that a damaged ear can detect them more easily &mdash; it is a non-surgical device worn in or behind the ear. A cochlear implant is a surgically implanted device that directly stimulates the auditory nerve, bypassing damaged parts of the inner ear. Cochlear implants are typically recommended for individuals with severe-to-profound sensorineural hearing loss who do not benefit sufficiently from hearing aids. After implantation, a structured therapy programme at a certified centre like Prisha Clinic is essential.</p>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">
+            <p>A hearing aid amplifies sounds so that a damaged ear can detect them more easily &mdash; it is a non-surgical device worn in or behind the ear. A cochlear implant is a surgically implanted device that directly stimulates the auditory nerve, bypassing damaged parts of the inner ear. Cochlear implants are typically recommended for individuals with severe-to-profound sensorineural hearing loss who do not benefit sufficiently from hearing aids. After implantation, a structured therapy programme at a certified centre like Prisha Clinic is essential.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="py-16 px-4" style="background:linear-gradient(135deg,#007A8A 0%,#00B8D4 45%,#EC1E8C 100%);">
-  <div class="max-w-xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-white mb-3">Not sure which service you need?</h2>
-    <p class="text-white/80 mb-8">Book a &#8377;500 consultation with Dr. Mridula Rani and get a clear assessment of what you need and why.</p>
-    <a href="contact.html" class="btn btn-outline">Book a Consultation</a>
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="container">
+    <h2>Not sure which service you need?</h2>
+    <p>Book a &#8377;500 consultation with Dr. Mridula Rani and get a clear assessment of what you need and why.</p>
+    <div class="row" style="justify-content:center;">
+      <a href="contact.html" class="btn btn-light">Book a consultation</a>
+      <a href="https://wa.me/917980043162" target="_blank" rel="noopener" class="btn btn-ghost-light">Message on WhatsApp &rarr;</a>
+    </div>
   </div>
 </section>
 
 </main>
-<div id="footer-placeholder"></div>
-<script src="js/script.js"></script>
+<div id="footer-slot"></div>
+<script src="assets/app.js"></script>
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = this.closest('.faq-item');
+      var answer = item.querySelector('.faq-a');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o) {
+        o.classList.remove('open');
+        o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        o.querySelector('.faq-a').style.maxHeight = '0';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
 </body>
 </html>

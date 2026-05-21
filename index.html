@@ -504,7 +504,10 @@
 
     /* CTA strip responsive */
     @media (max-width: 880px) {
-      .cta-strip .container { grid-template-columns: 1fr !important; }
+      .cta-strip .container { grid-template-columns: 1fr !important; gap: 24px !important; align-items: start !important; }
+    }
+    @media (max-width: 640px) {
+      .map-wrap, .map-wrap iframe { min-height: 220px; }
     }
   </style>
 </head>

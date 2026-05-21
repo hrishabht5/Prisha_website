@@ -358,6 +358,10 @@ textarea.form-input { resize: vertical; min-height: 110px; }
 
 /* ===== MAP ===== */
 .map-wrapper { border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 16px rgba(0,184,212,0.14); }
+.map-wrapper iframe { width: 100%; height: 420px; display: block; }
+@media (max-width: 640px) {
+  .map-wrapper iframe { height: 240px; }
+}
 
 /* ===== BOUNCE KEYFRAME (counters) ===== */
 @keyframes bounce-up {
