@@ -349,19 +349,30 @@ p { color: var(--ink-2); }
 }
 
 .mobile-menu {
-  position: fixed; inset: 64px 0 0 0; z-index: 39;
+  position: fixed;
+  top: 64px; left: 0; right: 0; bottom: 0;
+  z-index: 999;
   background: var(--ivory);
   padding: 24px;
-  transform: translateY(-8px);
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  border-top: 1px solid var(--line);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid var(--line);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
 }
 @media (min-width: 721px) and (max-width: 880px) {
-  .mobile-menu { inset: 100px 0 0 0; }
+  .mobile-menu { top: 100px; }
 }
-.mobile-menu.open { opacity: 1; transform: none; pointer-events: auto; }
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;
+}
 .mobile-menu a {
   display: block;
   padding: 16px 6px;
