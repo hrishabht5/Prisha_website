@@ -42,15 +42,15 @@ const HEADER_HTML = `
     </nav>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu"><span></span></button>
   </div>
-  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu">
-    ${NAV_ITEMS.map(n => `<a href="${n.href}">${n.label}</a>`).join("")}
-    <a href="contact.html" class="cta">Book consultation →</a>
-    <div style="margin-top:24px; font-size:14px; color: var(--mute);">
-      <a href="tel:+917980043162" style="display:block; padding:6px 0;">+91 79800 43162</a>
-      <a href="https://wa.me/917980043162" style="display:block; padding:6px 0;">WhatsApp →</a>
-    </div>
-  </div>
 </header>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu">
+  ${NAV_ITEMS.map(n => `<a href="${n.href}">${n.label}</a>`).join("")}
+  <a href="contact.html" class="cta">Book consultation →</a>
+  <div style="margin-top:24px; font-size:14px; color: var(--mute);">
+    <a href="tel:+917980043162" style="display:block; padding:6px 0;">+91 79800 43162</a>
+    <a href="https://wa.me/917980043162" style="display:block; padding:6px 0;">WhatsApp →</a>
+  </div>
+</div>
 `;
 
 const FOOTER_HTML = `
